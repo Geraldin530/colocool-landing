@@ -11,18 +11,14 @@
   --violet: #7B5CF0;
   --green: #3EC98E;
   --dark: #1A1530;
-  --grey: rgba(255,255,255,0.55);
+  --grey: #374151;
 }
 html { scroll-behavior: smooth; }
 body {
   font-family: "Inter", sans-serif;
-  color: white;
-  background-color: #7B5CF0;
-  /* Cercles fixes calqués sur la slide 1 */
-  background-image:
-    radial-gradient(circle at 94% 8%, rgba(180,160,255,0.45) 0%, transparent 35%),
-    radial-gradient(circle at 6% 92%, rgba(150,120,240,0.35) 0%, transparent 35%);
-  background-attachment: fixed;
+  color: #1A1530;
+  background-color: #ffffff;
+  background-image: none;
   min-height: 100vh;
 }
 
@@ -31,13 +27,13 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 12px 40px;
-  background: rgba(90, 60, 210, 0.55);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(123,92,240,0.15);
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .nav-logo img { width: 34px; height: 34px; border-radius: 8px; }
-.nav-logo span { font-size: 17px; font-weight: 800; color: white; }
+.nav-logo span { font-size: 17px; font-weight: 800; color: #1A1530; }
 
 /* HERO */
 .hero {
@@ -65,11 +61,11 @@ nav {
 
 /* Pill comme slide 1 */
 .hero-pill {
-  border: 2px solid rgba(255,255,255,0.5);
+  border: 2px solid rgba(123,92,240,0.4);
   border-radius: 999px;
   padding: 10px 30px;
-  font-size: 15px; font-weight: 700; color: white;
-  background: rgba(255,255,255,0.08);
+  font-size: 15px; font-weight: 700; color: #7B5CF0;
+  background: rgba(123,92,240,0.07);
   margin-bottom: 28px;
   white-space: nowrap;
 }
@@ -77,7 +73,7 @@ nav {
 /* Titre */
 .hero h1 {
   font-size: clamp(34px, 5vw, 54px); font-weight: 900;
-  line-height: 1.1; color: white;
+  line-height: 1.1; color: #1A1530;
   margin-bottom: 36px;
 }
 .hero h1 em { color: var(--green); font-style: normal; }
@@ -107,14 +103,14 @@ nav {
 
 /* Tagline bas hero */
 .hero-tagline {
-  font-size: 13px; color: rgba(255,255,255,0.45);
+  font-size: 13px; color: #6B7280;
   font-style: italic;
 }
 
 /* SEPARATEUR */
 hr.sep {
   max-width: 900px; margin: 0 auto;
-  border: none; border-top: 1px solid rgba(255,255,255,0.12);
+  border: none; border-top: 1px solid rgba(123,92,240,0.12);
 }
 
 /* SECTIONS */
@@ -125,9 +121,9 @@ section { padding: 88px 24px; }
 .sec-head { text-align: center; margin-bottom: 48px; }
 .sec-head h2 {
   font-size: clamp(24px, 3.5vw, 36px); font-weight: 800;
-  color: white; margin-bottom: 12px;
+  color: #1A1530; margin-bottom: 12px;
 }
-.sec-head p { font-size: 15px; color: var(--grey); max-width: 420px; margin: 0 auto; }
+.sec-head p { font-size: 15px; color: #374151; max-width: 420px; margin: 0 auto; }
 
 /* FEATURES */
 .features-grid {
@@ -136,9 +132,9 @@ section { padding: 88px 24px; }
   gap: 16px;
 }
 .feat {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.14);
-  border-left: 4px solid rgba(255,255,255,0.3);
+  background: #F8F7FF;
+  border: 1px solid rgba(123,92,240,0.12);
+  border-left: 4px solid rgba(123,92,240,0.3);
   border-radius: 16px; padding: 24px;
 }
 .feat.g  { border-left-color: var(--green); }
@@ -147,8 +143,8 @@ section { padding: 88px 24px; }
 .feat.y  { border-left-color: #F7C948; }
 .feat.pu { border-left-color: #C084FC; }
 .feat-icon { font-size: 28px; margin-bottom: 12px; }
-.feat h3 { font-size: 15px; font-weight: 700; color: white; margin-bottom: 6px; }
-.feat p  { font-size: 13px; color: var(--grey); line-height: 1.6; }
+.feat h3 { font-size: 15px; font-weight: 700; color: #1A1530; margin-bottom: 6px; }
+.feat p  { font-size: 13px; color: #374151; line-height: 1.6; }
 
 /* HOW */
 .steps {
@@ -158,14 +154,14 @@ section { padding: 88px 24px; }
 .step { flex: 1; min-width: 200px; max-width: 250px; text-align: center; padding: 0 16px; }
 .step-num {
   width: 52px; height: 52px; border-radius: 50%;
-  background: rgba(255,255,255,0.18);
-  border: 2px solid rgba(255,255,255,0.45);
-  color: white; font-weight: 800; font-size: 20px;
+  background: rgba(123,92,240,0.1);
+  border: 2px solid rgba(123,92,240,0.4);
+  color: #7B5CF0; font-weight: 800; font-size: 20px;
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 16px;
 }
-.step h4 { font-size: 15px; font-weight: 700; color: white; margin-bottom: 8px; }
-.step p  { font-size: 13px; color: var(--grey); line-height: 1.6; }
+.step h4 { font-size: 15px; font-weight: 700; color: #1A1530; margin-bottom: 8px; }
+.step p  { font-size: 13px; color: #374151; line-height: 1.6; }
 .step-code {
   display: inline-block; margin-top: 12px;
   background: rgba(62,201,142,0.18); border: 1px solid rgba(62,201,142,0.4);
@@ -175,8 +171,8 @@ section { padding: 88px 24px; }
 
 /* CTA */
 .cta { text-align: center; padding: 88px 24px 0; }
-.cta h2 { font-size: clamp(26px, 4vw, 42px); font-weight: 900; color: white; margin-bottom: 14px; }
-.cta-sub { font-size: 16px; color: var(--grey); margin-bottom: 48px; max-width: 400px; margin-left: auto; margin-right: auto; }
+.cta h2 { font-size: clamp(26px, 4vw, 42px); font-weight: 900; color: #1A1530; margin-bottom: 14px; }
+.cta-sub { font-size: 16px; color: #374151; margin-bottom: 48px; max-width: 400px; margin-left: auto; margin-right: auto; }
 
 /* Bloc stores centré avec espace équilibré */
 .cta-stores {
@@ -185,30 +181,30 @@ section { padding: 88px 24px; }
   align-items: center;
   gap: 20px;
   padding: 40px 32px;
-  background: rgba(0,0,0,0.15);
-  border-top: 1px solid rgba(255,255,255,0.1);
+  background: #F8F7FF;
+  border-top: 1px solid rgba(123,92,240,0.1);
   margin-top: 48px;
 }
 .cta-stores .store-row { margin: 0; }
 .cta-stores .store-btn { margin-bottom: 20px; }
 .cta-note {
-  font-size: 13px; color: rgba(255,255,255,0.35);
+  font-size: 13px; color: #6B7280;
   letter-spacing: 0.2px;
 }
 .cta-tagline {
-  font-size: 12px; color: rgba(255,255,255,0.22);
+  font-size: 12px; color: #9CA3AF;
   margin-top: 8px; font-style: italic;
 }
 
 /* FOOTER */
 footer {
   padding: 20px 24px; text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  background: rgba(0,0,0,0.2);
+  border-top: 1px solid rgba(123,92,240,0.08);
+  background: #F3F4F6;
 }
-footer p { font-size: 12px; color: rgba(255,255,255,0.25); }
-footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
-footer a:hover { color: white; }
+footer p { font-size: 12px; color: #6B7280; }
+footer a { color: #7B5CF0; text-decoration: none; }
+footer a:hover { color: #5B3DD0; }
 
 @media (max-width: 580px) {
   nav { padding: 12px 18px; }
@@ -312,7 +308,7 @@ footer a:hover { color: white; }
         <div class="step-num">2</div>
         <h4>Partage le code</h4>
         <p>Envoie ce code à tes colocataires. Ils rejoignent en 10 secondes.</p>
-        <div style="font-size:28px; margin: 10px 0; color: var(--green);">↓</div>
+        <div style="font-size:28px; margin: 10px 0; color: var(--violet);">↓</div>
         <div class="step-code">ABC123</div>
       </div>
       <div class="step">
@@ -330,7 +326,7 @@ footer a:hover { color: white; }
 <section class="cta">
   <div class="inner">
     <h2>Prêt à tester ?</h2>
-    <p class="cta-sub">Colocool arrive bientôt sur Android et iOS.<br>Sois parmi les premiers à le découvrir.</p>
+    <p class="cta-sub">Colocool arrive bientôt sur Android et iOS.<br>Sois parmi les premiers à la découvrir.</p>
   </div>
   <div class="cta-stores">
     <div class="store-row">
@@ -343,13 +339,13 @@ footer a:hover { color: white; }
         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NjQgMTY4IiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjU5Ij4KICA8cmVjdCB3aWR0aD0iNTY0IiBoZWlnaHQ9IjE2OCIgcng9IjE0IiBmaWxsPSIjMDAwIi8+CiAgPHJlY3QgeD0iMS41IiB5PSIxLjUiIHdpZHRoPSI1NjEiIGhlaWdodD0iMTY1IiByeD0iMTIuNSIgZmlsbD0iIzAwMCIgc3Ryb2tlPSIjODg4IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDx0ZXh0IHg9IjI4MiIgeT0iNTgiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLEhlbHZldGljYSBOZXVlLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC42NSkiIGZvbnQtd2VpZ2h0PSI0MDAiIGxldHRlci1zcGFjaW5nPSIxIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Eb3dubG9hZCBvbiB0aGU8L3RleHQ+CiAgPHRleHQgeD0iMjgyIiB5PSIxMTgiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLEhlbHZldGljYSBOZXVlLEFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTIiIGZpbGw9IiNmZmYiIGZvbnQtd2VpZ2h0PSI1MDAiIGxldHRlci1zcGFjaW5nPSItMC41IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BcHAgU3RvcmU8L3RleHQ+Cjwvc3ZnPg==" alt="App Store">
       </a>
     </div>
-    <p class="cta-note">🎁 30 jours d'essai gratuit.&nbsp; Aucune carte bancaire requise</p>
+    <p class="cta-note">🎁 30 jours d'essai gratuit - Aucune carte bancaire requise</p>
     <p class="cta-tagline">Application mobile développée avec ❤️ par AppliXia</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 AppliXia · Tous droits réservés</p>
+  <p>© 2026 AppliXia - Tous droits réservés</p>
 </footer>
 
 </body>
